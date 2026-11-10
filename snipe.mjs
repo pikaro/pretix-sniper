@@ -3,7 +3,7 @@ import { EventEmitter } from 'node:events';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { parseArgs } from 'node:util';
 
-const SAMPLES = 3;
+const SAMPLES = 10;
 const MAX_CALIBRATION_ATTEMPTS = SAMPLES + 3;
 const IDLE_MS = 10_000;
 const SALE_WARMUP_MS = 5_000;
