@@ -818,7 +818,7 @@ async function connectToShop(url, port) {
   const matches = tabs.filter(
     tab => tab.type === 'page' && /^https?:/.test(tab.url) && queueUrl(tab.url) === url);
   if (matches.length !== 1) {
-    throw new Error(`Expected one Chrome tab matching URL; found ${matches.length}`);
+    throw new Error(`Expected one Chrome tab matching ${url}; found ${matches.length}`);
   }
   return CDP.connect(matches[0].webSocketDebuggerUrl);
 }
